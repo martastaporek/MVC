@@ -16,16 +16,18 @@ class Item:
 
 class ItemList:
 
-    def __init__(self):
-        self.item_list = []
 
+    item_list = ["testy", ]
+
+
+    @classmethod
     def add_item(self, name, description):
 
         item = Item(name, description)
         self.item_list.append(item)
 
+    @classmethod    
     def delete_item(self, number):
-        number = int(number)
         number -= 1 #bo indeksy od 0
         del self.item_list[number]
 
