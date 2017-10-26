@@ -20,9 +20,9 @@ def menu():
         if answer == "1":
             add_item_by_user()
         elif answer == "2":
-            print_list()
+            print(ItemList.basic_data_to_print())
         elif answer == "3":
-            print_specific_list()
+            print(ItemList.specific_data_to_print())
         elif answer == "4":
             delete_item_by_user()
         elif answer == "5":
@@ -35,5 +35,6 @@ def menu():
             exit()
 
 if __name__ == "__main__":
+    
     ItemList.add_item("task1", "test description")
     menu()
