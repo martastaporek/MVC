@@ -28,7 +28,7 @@ class ItemList:
 
     @classmethod    
     def delete_item(self, number):
-        number -= 1 #bo indeksy od 0
+        number -= number
         del self.item_list[number]
 
     def __str__(self):

@@ -18,21 +18,27 @@ def add_item_by_user():
 
 def delete_item_by_user():
 
-    for i in range(len(ItemList.item_list)): #printowanie tabeli
-        print(ItemList.item_list[1].name)
+    #for i in range(len(ItemList.item_list)): #printowanie tabeli
+        #print(ItemList.item_list[1].name)
     
     while True:
         try:
             number = int(input("Enter the number of the task you would like to remove: "))
             break
-        except TypeError("Enter only numbers"): #sprawdzic na Linuksie
+        except ValueError:
+            print("Enter only numbers")
             pass
     
+    while True:
+        if number < len(ItemList.item_list) + 1:
+            break
+        else:
+            print("The number is not on the list")
+            delete_item_by_user()
+
     ItemList.delete_item(number)
 
 
-add_item_by_user()
-print(ItemList.item_list[0])
-delete_item_by_user()
-print(ItemList.item_list[0])
+
+
 
