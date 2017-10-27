@@ -4,7 +4,7 @@ def enter_the_name_of_task():
 
     while True:
         name = input("Enter the name of task. Maximum length is 20 characters: ")
-        if len(name) < 21 or len(name) == 0:
+        if len(name) < 21 and len(name) > 0:
             return name
 
 
@@ -12,7 +12,7 @@ def enter_the_description_of_task():
 
     while True:
         description = input("Enter the description of the task. Maximum lenght is 150 characters: ")
-        if len(description) < 151 or len(description) == 0:
+        if len(description) < 151 and len(description) > 0:
             return description
 
 

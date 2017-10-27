@@ -3,9 +3,6 @@ from controller_module import *
 
 
 def menu():
-    """ 
-    Function menu() lets the user to call desired module. 
-    """
 
     while True:
         print("1. Add new task")
